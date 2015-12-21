@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="553.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DialogCadastroUsuarioController">
+   <children>
+      <ImageView fitHeight="127.0" fitWidth="156.0" layoutX="206.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+            <Image url="@../img/no-image.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtNome" layoutX="160.0" layoutY="264.0" prefHeight="25.0" prefWidth="290.0" />
+      <TextField fx:id="txtSenha" layoutX="160.0" layoutY="315.0" prefHeight="25.0" prefWidth="290.0" />
+      <Label layoutX="61.0" layoutY="269.0" text="Nome" />
+      <Label layoutX="60.0" layoutY="320.0" text="Senha" />
+      <Label layoutX="63.0" layoutY="373.0" text="Privilegio" />
+      <RadioButton fx:id="rbCprivilegio" layoutX="168.0" layoutY="372.0" mnemonicParsing="false" text="Com Privilegio">
+         <toggleGroup>
+            <ToggleGroup fx:id="privilegio" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbSprivilegio" layoutX="305.0" layoutY="372.0" mnemonicParsing="false" text="Sem Privilegio" toggleGroup="$privilegio" />
+      <Button fx:id="btSalvar" layoutX="255.0" layoutY="439.0" mnemonicParsing="false" onAction="#acaoInserirUsuario" text="Salvar" />
+   </children>
+</AnchorPane>

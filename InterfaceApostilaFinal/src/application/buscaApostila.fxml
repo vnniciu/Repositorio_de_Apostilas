@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="tabelaPane" prefHeight="534.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ApostilaController">
+   <children>
+      <TableView fx:id="tabela" editable="true" prefHeight="397.0" prefWidth="546.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="74.0" text="Id" />
+          <TableColumn fx:id="titulo" prefWidth="208.0" text="Titulo" />
+            <TableColumn fx:id="categoria" prefWidth="126.0" text="Categoria" />
+            <TableColumn fx:id="nome" prefWidth="136.0" text="Nome do usuario" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="cmEditar" mnemonicParsing="false" onAction="#acaoEditar" text="Editar" />
+                  <MenuItem fx:id="cmExcluir" mnemonicParsing="false" onAction="#acaoExcluir" text="Excluir" />
+                  <MenuItem fx:id="cmSalvar" mnemonicParsing="false" onAction="#acaoSalva" text="Salvar" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <Button fx:id="NovaA" layoutX="573.0" layoutY="291.0" mnemonicParsing="false" onAction="#acaoNovo" prefHeight="25.0" prefWidth="62.0" text="Novo" />
+      <Button fx:id="btnExcluir" layoutX="573.0" layoutY="360.0" mnemonicParsing="false" onAction="#acaoExcluir" text="Excluir" />
+      <Button fx:id="btnEditar" layoutX="573.0" layoutY="325.0" mnemonicParsing="false" onAction="#acaoEditar" prefHeight="25.0" prefWidth="62.0" text="Editar" />
+      <Button fx:id="btnSalva" layoutX="573.0" layoutY="255.0" mnemonicParsing="false" onAction="#acaoSalva" prefHeight="25.0" prefWidth="62.0" text="Salvar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="412.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DialogAlterarController">
+   <children>
+      <TextField fx:id="txtTitulo" layoutX="169.0" layoutY="101.0" />
+      <TextField fx:id="txtCategoria" layoutX="169.0" layoutY="145.0" />
+      <TextField fx:id="txtCapa" layoutX="169.0" layoutY="191.0" />
+      <TextField fx:id="txtApostila" layoutX="169.0" layoutY="238.0" />
+      <Label layoutX="32.0" layoutY="106.0" prefHeight="15.0" prefWidth="98.0" text="Titulo" />
+      <Label layoutX="32.0" layoutY="150.0" prefHeight="15.0" prefWidth="98.0" text="Categoria" />
+      <Label layoutX="32.0" layoutY="196.0" prefHeight="15.0" prefWidth="98.0" text="Capa" />
+      <Label layoutX="32.0" layoutY="243.0" prefHeight="15.0" prefWidth="98.0" text="Apostila" />
+      <Button fx:id="btnInserir" layoutX="214.0" layoutY="326.0" mnemonicParsing="false" onAction="#acaoInsere" prefHeight="38.0" prefWidth="70.0" text="OK" />
+      <Button fx:id="btnCapa" layoutX="359.0" layoutY="191.0" mnemonicParsing="false" onAction="#acaoCapa" text="Buscar" />
+      <Button fx:id="btnApostila" layoutX="359.0" layoutY="238.0" mnemonicParsing="false" onAction="#acaoApostila" text="Buscar" />
+   </children>
+</AnchorPane>

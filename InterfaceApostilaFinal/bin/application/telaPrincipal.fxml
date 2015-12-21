@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PrincipalController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="791.0" prefWidth="864.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane>
+               <children>
+                  <MenuBar layoutX="139.0" layoutY="7.0" prefHeight="29.0" prefWidth="570.0" scaleX="1.5" scaleY="1.5">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Arquivo">
+                        <items>
+                              <MenuItem fx:id="mAbrir1" mnemonicParsing="true" onAction="#menuAbrirAction" text="Adicionar Usuario" />
+                              <MenuItem fx:id="mAbrir2" mnemonicParsing="true" onAction="#menuAbrirAction" text="Adicionar Apostila" />
+                              <MenuItem fx:id="mAbrir" mnemonicParsing="true" onAction="#menuAbrirAction" text="Abrir" />
+                              <MenuItem fx:id="mSalvar" onAction="#menuAbrirAction" text="Salvar" />
+                          <MenuItem fx:id="mSair" mnemonicParsing="false" onAction="#menuAbrirAction" text="Sair" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Editar">
+                        <items>
+                          <MenuItem fx:id="mAlterar" onAction="#menuAbrirAction" text="Alterar" />
+                              <MenuItem fx:id="mExcluir" onAction="#menuAbrirAction" text="Excluir" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Ajuda">
+                        <items>
+                          <MenuItem fx:id="mSobre" mnemonicParsing="false" onAction="#menuAbrirAction" text="Sobre" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+                  <TabPane fx:id="tabBemvindo" layoutY="42.0" prefHeight="759.0" prefWidth="850.0" tabClosingPolicy="ALL_TABS">
+                    <tabs>
+                      <Tab closable="false" text="Bem-vindo">
+                           <content>
+                          <AnchorPane fx:id="tabBemVindo" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="357.0" fitWidth="519.0" layoutX="142.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/logoApostila.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label alignment="CENTER" graphicTextGap="10.0" layoutX="93.0" layoutY="71.0" lineSpacing="2.0" prefHeight="67.0" prefWidth="665.0" text="APOSTILAS" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="Lucida Sans Demibold" size="50.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                      </Tab>
+                      <Tab closable="false" text="Buscar Apostila">
+                        <content>
+                          <AnchorPane fx:id="tabelaBusca" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <RadioButton fx:id="rbID" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" text="Buscar por ID">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grupoApostila" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbCategoria" layoutX="204.0" layoutY="67.0" mnemonicParsing="false" text="Buscar por Categoria" toggleGroup="$grupoApostila">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbNome" layoutX="413.0" layoutY="67.0" mnemonicParsing="false" text="Buscar por nome" toggleGroup="$grupoApostila">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <TextField fx:id="tfBuscaApostila" layoutX="48.0" layoutY="111.0" prefHeight="30.0" prefWidth="419.0" />
+                                    <Label layoutX="169.0" layoutY="14.0" prefHeight="36.0" prefWidth="300.0" text="Busque uma Apostila">
+                                       <font>
+                                          <Font name="Cousine Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnBuscaAp" layoutX="496.0" layoutY="111.0" mnemonicParsing="false" onAction="#buscarApostilaClick" prefHeight="31.0" prefWidth="78.0" text="Buscar" />
+                                    <AnchorPane fx:id="tabBuscar" layoutX="14.0" layoutY="174.0" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab fx:id="tabBuscarUsuario" closable="false" text="Buscar Usuario">
+                           <content>
+                              <AnchorPane fx:id="tabBuscar1" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Button fx:id="btnBuscaUs1" layoutX="496.0" layoutY="111.0" mnemonicParsing="false" onAction="#btnBuscaU" prefHeight="31.0" prefWidth="79.0" text="Buscar" />
+                                    <Label layoutX="169.0" layoutY="14.0" prefHeight="36.0" prefWidth="300.0" text="Busque um Usuario">
+                                       <font>
+                                          <Font name="Cousine Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tfBuscausuario1" layoutX="48.0" layoutY="111.0" prefHeight="30.0" prefWidth="419.0" />
+                                    <RadioButton fx:id="rbUNome1" layoutX="204.0" layoutY="67.0" mnemonicParsing="false" text="Buscar por nome">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grupoUsuario1" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbUID1" layoutX="46.0" layoutY="67.0" mnemonicParsing="false" text="Buscar por ID" toggleGroup="$grupoUsuario1">
+                                       <font>
+                                          <Font name="Ubuntu" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <AnchorPane fx:id="tabBuscarU" layoutX="46.0" layoutY="174.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="abaApostila" closable="false" text="Apostila">
+                           <content>
+                              <AnchorPane fx:id="tabApostila" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <HTMLEditor fx:id="EditorApostila" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutY="45.0" prefHeight="682.0" prefWidth="850.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+               <effect>
+                  <DropShadow color="#0e8c23a7" height="19.48" radius="8.0975" width="14.91" />
+               </effect>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
